@@ -1,6 +1,6 @@
-# responsiveTrucator
+# responsiveTruncator
 
-Simple jQuery to truncate content (more/less toggle links) in a responsive way.
+Simple jQuery plugin to truncate content (more/less toggle links) in a responsive way.
 
 ## Initializing the plugin
 
