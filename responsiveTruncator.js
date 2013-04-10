@@ -3,7 +3,7 @@
  *
  * https://github.com/jkeck/responsiveTruncator
  *
- * VERSION 0.0.1
+ * VERSION 0.0.2
  *
 **/
 (function( $ ){
@@ -24,11 +24,17 @@
 					var lineHeight = Math.floor(parseInt(fontSize.replace('px','')) * 1.5);
 					var total_lines = Math.ceil(parent.height() / lineHeight);
 					var settings = $.extend({
-						'lines' : 3,
-						'more'  : 'more',
-						'less'  : 'less'
+						'lines'  : 3,
+						'height' : null,
+						'more'   : 'more',
+						'less'   : 'less'
 					}, options);
-				  var truncate_height = (lineHeight * settings.lines);
+					var truncate_height;
+					if(settings.height){
+						truncate_height = settings.height;
+					}else{
+					  truncate_height = (lineHeight * settings.lines);	
+					}
 				  if(parent.height() > truncate_height) {
 					  var orig_content = parent.html();
 						parent.html("<div style='height: " + truncate_height + "px; overflow: hidden;' class='responsiveTruncate'></div>");

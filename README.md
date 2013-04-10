@@ -22,11 +22,13 @@ The plugin updates on page resize so that the toggle element and links will be r
 This plugin will take the following options:
 
 * lines (the number of lines to show before truncation [Default: 3])
+* height (a specific height in pixels to show before truncation [Default: null]) NOTE: Specifying a height trumps the lines option.
 * more (the text for the more link [Default: more])
 * less (the text for the less link [Default: less])
 
 ```javascript
 $(document).ready(function(){
   $("[data-truncate]").responsiveTruncate({lines: 5, more: 'más', less: 'menos'});
+  $("[data-truncate-by-height]").responsiveTruncate({height: 50, more: 'más', less: 'menos'});
 });
 ```
