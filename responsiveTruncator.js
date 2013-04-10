@@ -33,7 +33,7 @@
 					  var orig_content = parent.html();
 						parent.html("<div style='height: " + truncate_height + "px; overflow: hidden;' class='responsiveTruncate'></div>");
 						var truncate = $(".responsiveTruncate", parent);
-						truncate.text(orig_content);
+						truncate.html(orig_content);
 						truncate.after("<a class='responsiveTruncatorToggle' href='#'>" + settings.more + "</a>");
 						var toggle_link = $(".responsiveTruncatorToggle", parent);
 						toggle_link.click(function(){
