@@ -21,7 +21,7 @@
 			  if($(".responsiveTruncate", $(this)).length == 0){
 				  var parent = $(this);
 				  var fontSize = $(this).css('font-size');
-					var lineHeight = Math.floor(parseInt(fontSize.replace('px','')) * 1.5);
+				  var lineHeight = $(this).css("line-height") ? $(this).css("line-height").replace('px','') : Math.floor(parseInt(fontSize.replace('px','')) * 1.5);
 					var total_lines = Math.ceil(parent.height() / lineHeight);
 					var settings = $.extend({
 						'lines'  : 3,
